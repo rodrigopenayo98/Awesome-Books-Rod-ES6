@@ -14,57 +14,63 @@ let list = JSON.parse(localStorage.getItem('bookList')) || [
   },
 ];
 
-function saveToLocalStorage() {
+const saveToLocalStorage = () => {
   localStorage.setItem('bookList', JSON.stringify(list));
-}
+};
 
-let htmlList = '';
+const removeBook = (event) => {
+  const button = event.target;
+  const bookContainer = button.parentNode.parentNode;
+  const { bookId } = bookContainer.dataset;
 
-function renderBooks() {
-  htmlList = '';
+  list = list.filter((book) => book.id !== bookId);
+
+  bookList.removeChild(bookContainer);
+
+  saveToLocalStorage();
+};
+
+const renderBooks = () => {
+  bookList.innerHTML = '';
 
   list.forEach((book) => {
-    htmlList += `
-    <div>
-      <p>
-        <span class="title">${book.title}</span>
-        <br>
-        ${book.author}
-        <br>
-        <button class="remove">Remove</button>
-      </p>
-      <hr>
-    </div>`;
-  });
+    const bookContainer = document.createElement('div');
+    bookContainer.dataset.bookId = book.id;
 
-  bookList.innerHTML = htmlList;
+    const bookInfo = document.createElement('p');
+    const titleElement = document.createElement('span');
+    titleElement.className = 'title';
+    titleElement.textContent = book.title;
+    const authorElement = document.createTextNode(book.author);
+    const removeButton = document.createElement('button');
+    removeButton.className = 'remove';
+    removeButton.textContent = 'Remove';
+
+    bookInfo.appendChild(titleElement);
+    bookInfo.appendChild(document.createElement('br'));
+    bookInfo.appendChild(authorElement);
+    bookInfo.appendChild(document.createElement('br'));
+    bookInfo.appendChild(removeButton);
+
+    bookContainer.appendChild(bookInfo);
+    bookContainer.appendChild(document.createElement('hr'));
+
+    bookList.appendChild(bookContainer);
+  });
 
   const removeButtons = document.querySelectorAll('.remove');
   removeButtons.forEach((button) => {
-    // eslint-disable-next-line
     button.addEventListener('click', removeBook);
   });
-}
+};
 
-function removeBook(event) {
-  const button = event.target;
-  const bookContainer = button.parentNode.parentNode;
-  const bookTitle = bookContainer.querySelector('.title').textContent;
-
-  const updatedList = list.filter((book) => book.title !== bookTitle);
-
-  list = updatedList;
-
-  renderBooks();
-  saveToLocalStorage();
-}
-
-function addBook() {
+const addBook = () => {
   const newTitle = title.value.trim();
   const newAuthor = author.value.trim();
 
   if (newTitle !== '' && newAuthor !== '') {
     const newBook = {
+      id: Date.now().toString(),
       title: newTitle,
       author: newAuthor,
     };
@@ -77,7 +83,7 @@ function addBook() {
     title.value = '';
     author.value = '';
   }
-}
+};
 
 renderBooks();
 
