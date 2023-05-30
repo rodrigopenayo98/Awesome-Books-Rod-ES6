@@ -23,7 +23,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Portfolio: Setup and Mobile First] 
+# 📖 [Awesome Books] 
 
 This is an app called Awesome Books, which consists of a list of books, in which you can save the books that are to your liking, and eliminate those that no longer call your attention.
 
