@@ -67,6 +67,11 @@ function renderBooks() {
   });
 }
 
+function saveToLocalStorage() {
+
+localStorage.setItem("booklist", JSON.stringify(list));
+
+}
 
 renderBooks();
 
