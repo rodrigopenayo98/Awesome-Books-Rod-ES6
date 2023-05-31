@@ -1,2 +1,126 @@
-/* stylelint-disable-next-line */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(154, 232, 232);
+  padding: 5px;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Short Stack', cursive;
+  font-size: 23px;
+  padding: 8px;
+}
+
+#book-list {
+  border: 2px solid black;
+  margin: 5px;
+  padding: 4px;
+  width: 98%;
+  margin-bottom: 20px;
+  background-color: cornsilk;
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: row; /* Cambiado a fila */
+  align-items: center;
+  justify-content: space-between; /* Agregado */
+  font-family: 'Lato', sans-serif;
+  font-family: 'Short Stack', cursive;
+  font-size: 10px;
+  font-weight: bolder;
+  padding: 1px;
+}
+
+.remove {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Short Stack', cursive;
+  font-weight: bolder;
+  border-top: 2px solid black;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  margin-right: 5px;
+  margin-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: rgb(239, 100, 128);
+}
+
+.textBook {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+
+.titleBook {
+  width: auto;
+  font-size: 10px;
+  padding-right: 3px;
+}
+
+.authorName {
+  width: auto;
+  font-size: 10px;
+}
+
+hr {
+  border: 1px solid black;
+  width: 15%;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'Short Stack', cursive;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.little-form {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+}
+
+#title {
+  border: 2px solid black;
+  margin-bottom: 10px;
+  padding: 3px;
+  background-color: cornsilk;
+  font-family: 'Short Stack', cursive;
+  font-weight: bolder;
+  width: 100%;
+}
+
+#title::placeholder {
+  font-family: 'Short Stack', cursive;
+  padding: 3px;
+  color: black;
+  font-weight: bolder;
+}
+
+#author {
+  border: 2px solid black;
+  margin-bottom: 10px;
+  padding: 3px;
+  background-color: cornsilk;
+  font-family: 'Short Stack', cursive;
+  font-weight: bolder;
+  width: 100%;
+}
+
+#author::placeholder {
+  font-family: 'Short Stack', cursive;
+  padding: 3px;
+  color: black;
+  font-weight: bolder;
+}
 
