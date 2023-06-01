@@ -14,15 +14,50 @@
     <title>Awesome Books</title>
   </head>
   <body>
-    <h1>Avesome books</h1>
-    <div id="book-list"></div>
-    <hr>
-    <h2>Add a new book</h2>
-    <div class="little-form">
-      <input id="title" type="text" placeholder="Title" />
-      <input id="author" type="text" placeholder="Author" />
-      <button id="add" type="submit">Add</button>
+    <header>
+      <h3 id="logo-books">Awesome Books</h3>
+      <nav id="nav-books">
+        <a href="#list" id="item1">List</a>
+        <hr>
+        <a href="#add-new" id="item2">Add New</a>
+        <hr>
+        <a href="#contact" id="item3">Contact</a>
+      </nav>
+    </header>
+    <div id="date-container">
+      <p id="date-time"></p>
     </div>
+    <section id="list">
+      <h1>All awesome books</h1>
+      <div id="book-list"></div>
+    </section>
+    <section id="add-new" class="hidden">
+      <h2>Add a new book</h2>
+      <div class="little-form">
+        <input id="title" type="text" placeholder="Title" />
+        <input id="author" type="text" placeholder="Author" />
+        <button id="add" type="submit">Add</button>
+      </div>
+    </section>
+    <section id="contact" class="hidden">
+      <h2 id="title-contact">Contact information</h2>
+      <div>
+      <p id="paragraph-contact">Do you have any questions or you just want to say "Hello"?. You can reach out to us!
+      </p>
+      <br>
+      <ul id="list-contact">
+        <li>Our e-mail mail@mail.com</li>
+        <li>Our phone number: 0043586534422</li>
+        <li>Our address: Streetname 22, 84503 City, Country</li>
+      </ul>
+    </div>
+    </section>
+    <section id="copyright">
+      <h4>Copyright    ...</h4>
+    </section>
   </body>
+  <footer>
+    <p>//</p>
+  </footer>
   <script src="./index.js"></script>
 </html>

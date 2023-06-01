@@ -10,29 +10,88 @@ body {
   align-items: center;
   background-color: rgb(154, 232, 232);
   padding: 5px;
+  height: 100vh;
+}
+
+nav {
+  margin-top: 4px;
+  display: flex;
+}
+
+hr {
+  border: 0.4px solid black;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 96.5%;
+  align-content: center;
+  border: 2px solid black;
+  padding-right: 11px;
+  padding-left: 11px;
+  height: 44px;
+  background-color: rgb(39 202 202);
+}
+
+#list {
+  height: 279px;
+  width: 100%;
+  padding-top: 144px;
+}
+
+#add-new,
+#contact {
+  padding-top: 144px;
+  height: 279px;
+}
+
+#contact {
+  width: 500px;
+}
+
+#list-contact > li {
+  margin-left: 50px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Short Stack', cursive;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+#paragraph-contact {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Short Stack', cursive;
+  font-weight: bolder;
+  font-size: 14px;
 }
 
 h1 {
   font-family: 'Lato', sans-serif;
   font-family: 'Short Stack', cursive;
   font-size: 23px;
+  text-align: center;
   padding: 8px;
+  position: relative;
+  bottom: 100px;
 }
 
 #book-list {
   border: 2px solid black;
-  margin: 5px;
+  margin: -2px;
   padding: 4px;
   width: 98%;
-  margin-bottom: 20px;
+  min-height: 21px;
+  margin-top: -89px;
+  margin-left: 4px;
   background-color: cornsilk;
 }
 
 .bookInfo {
   display: flex;
-  flex-direction: row; /* Cambiado a fila */
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between; /* Agregado */
+  justify-content: space-between;
   font-family: 'Lato', sans-serif;
   font-family: 'Short Stack', cursive;
   font-size: 10px;
@@ -70,29 +129,35 @@ h1 {
 .authorName {
   width: auto;
   font-size: 10px;
-}
-
-hr {
-  border: 1px solid black;
-  width: 15%;
-  margin-bottom: 20px;
+  padding-left: 0;
 }
 
 h2 {
   font-family: 'Short Stack', cursive;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: -41px;
+  text-align: center;
+  position: relative;
+  bottom: 100px;
+}
+
+h4 {
+  font-family: 'Short Stack', cursive;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 15px;
 }
 
 .little-form {
   display: flex;
   flex-direction: column;
-  width: 270px;
+  width: 380px;
+  margin-top: -50px;
 }
 
 #title {
   border: 2px solid black;
-  margin-bottom: 10px;
+  margin-bottom: 23px;
   padding: 3px;
   background-color: cornsilk;
   font-family: 'Short Stack', cursive;
@@ -134,7 +199,81 @@ h2 {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   padding-left: 5px;
   padding-right: 5px;
-  margin-left: 87%;
+  margin-left: 91%;
+  margin-top: 13px;
   width: 45px;
   background-color: rgb(103, 213, 167);
+}
+
+.hidden {
+  display: none;
+}
+
+#item1,
+#item2,
+#item3 {
+  text-decoration: none;
+  color: black;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+#nav-books a {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Short Stack', cursive;
+  font-weight: bolder;
+}
+
+#nav-books a:hover,
+#nav-books a.active {
+  color: cornsilk;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Short Stack', cursive;
+  font-weight: bolder;
+}
+
+#logo-books {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Short Stack', cursive;
+  font-weight: bolder;
+  padding-left: 15px;
+}
+
+#date-time {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Short Stack', cursive;
+  font-weight: bolder;
+  padding: 5px;
+}
+
+#date-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#copyright {
+  border: 2px solid black;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+footer {
+  border: 1px solid;
+  width: 100vw;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: -5px;
+  padding-bottom: 10px;
+  background-color: aquamarine;
+}
+
+footer p {
+  padding-right: 16px;
+  text-align: right;
+  font-weight: bolder;
+  padding-top: 14px;
+  font-family: 'Short Stack', cursive;
+  padding-bottom: 9px;
 }
