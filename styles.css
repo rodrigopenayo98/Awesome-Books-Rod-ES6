@@ -10,7 +10,7 @@ body {
   align-items: center;
   background-color: rgb(154, 232, 232);
   padding: 5px;
-  height: 100%;
+  height: 100vh;
 }
 
 nav {
@@ -41,7 +41,8 @@ header {
   padding-top: 144px;
 }
 
-#add-new, #contact{
+#add-new,
+#contact {
   padding-top: 144px;
   height: 279px;
 }
@@ -50,7 +51,7 @@ header {
   width: 500px;
 }
 
-#list-contact>li {
+#list-contact > li {
   margin-left: 50px;
   font-family: 'Lato', sans-serif;
   font-family: 'Short Stack', cursive;
@@ -90,7 +91,7 @@ h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   font-family: 'Lato', sans-serif;
   font-family: 'Short Stack', cursive;
   font-size: 10px;
@@ -128,6 +129,7 @@ h1 {
 .authorName {
   width: auto;
   font-size: 10px;
+  padding-left: 0;
 }
 
 h2 {
@@ -207,7 +209,9 @@ h4 {
   display: none;
 }
 
-#item1, #item2, #item3 {
+#item1,
+#item2,
+#item3 {
   text-decoration: none;
   color: black;
   padding-left: 9px;
@@ -257,9 +261,10 @@ h4 {
 
 footer {
   border: 1px solid;
-  width: 100%;
+  width: 100vw;
   margin-left: 5px;
   margin-top: 5px;
+  margin-bottom: -5px;
   padding-bottom: 10px;
   background-color: aquamarine;
 }

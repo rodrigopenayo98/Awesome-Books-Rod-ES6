@@ -127,33 +127,32 @@ itemThree.addEventListener('click', () => {
 });
 
 const navLinks = document.querySelectorAll('#nav-books a');
-navLinks.forEach(link => {
-   link.addEventListener('click', function(event) {
-     event.preventDefault();
-     navLinks.forEach(link => link.classList.remove('active'));
-     this.classList.add('active');
-   });
+navLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    navLinks.forEach((link) => link.classList.remove('active'));
+    this.classList.add('active');
+  });
 });
 
-const dateContainer = document.getElementById('date-container');
 const dateTimeElement = document.getElementById('date-time');
 
 function formatDate(date) {
-   const options = {
-     year: 'numeric',
-     month: 'long',
-     day: 'numeric',
-     hour: 'numeric',
-     minute: 'numeric',
-     second: 'numeric'
-   };
-   return date.toLocaleDateString('en-US', options);
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+  };
+  return date.toLocaleDateString('en-US', options);
 }
 
 function updateDateTime() {
-   const currentDate = new Date();
-   const formattedDate = formatDate(currentDate);
-   dateTimeElement.textContent = formattedDate;
+  const currentDate = new Date();
+  const formattedDate = formatDate(currentDate);
+  dateTimeElement.textContent = formattedDate;
 }
 
 updateDateTime();
