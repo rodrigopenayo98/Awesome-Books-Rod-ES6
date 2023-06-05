@@ -1,6 +1,9 @@
 import Book from './modules/book.js';
 import { DateTime } from './node_modules/luxon/src/luxon.js';
 import Navigation from './modules/navigation.js';
+import initializeBookList from './modules/initializeBookList.js';
+
+const bookList = initializeBookList();
 
 export default class BookList {
   constructor() {
