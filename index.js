@@ -1,7 +1,6 @@
 import Book from './modules/book.js';
 import { DateTime } from './node_modules/luxon/src/luxon.js';
 import Navigation from './modules/navigation.js';
-import initializeBookList from './modules/initializeBookList.js';
 
 export default class BookList {
   constructor() {
@@ -88,7 +87,6 @@ export default class BookList {
   }
 }
 
-initializeBookList();
 Navigation();
 
 function formatDate(date) {
