@@ -1,11 +1,9 @@
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-}
+import Book from './modules/book.js';
+import { DateTime } from './node_modules/luxon/src/luxon.js';
+import Navigation from './modules/navigation.js';
+import initializeBookList from './modules/initializeBookList.js';
 
-class BookList {
+export default class BookList {
   constructor() {
     this.list = JSON.parse(localStorage.getItem('bookList')) || [];
     this.titleInput = document.querySelector('#title');
@@ -90,68 +88,25 @@ class BookList {
   }
 }
 
-function initializeBookList() {
-  const bookList = new BookList();
-  return bookList;
-}
-
 initializeBookList();
-
-// Nacigation section
-
-const itemOne = document.getElementById('item1');
-const itemTwo = document.getElementById('item2');
-const itemThree = document.getElementById('item3');
-const list = document.getElementById('list');
-const addNew = document.getElementById('add-new');
-const contact = document.getElementById('contact');
-
-// when link is clicked the rest of the sections are hidden using the class
-
-itemOne.addEventListener('click', () => {
-  list.classList.remove('hidden');
-  addNew.classList.add('hidden');
-  contact.classList.add('hidden');
-});
-
-itemTwo.addEventListener('click', () => {
-  addNew.classList.remove('hidden');
-  list.classList.add('hidden');
-  contact.classList.add('hidden');
-});
-
-itemThree.addEventListener('click', () => {
-  contact.classList.remove('hidden');
-  list.classList.add('hidden');
-  addNew.classList.add('hidden');
-});
-
-const navLinks = document.querySelectorAll('#nav-books a');
-navLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
-    navLinks.forEach((link) => link.classList.remove('active'));
-    this.classList.add('active');
-  });
-});
-
-const dateTimeElement = document.getElementById('date-time');
+Navigation();
 
 function formatDate(date) {
-  const options = {
-    year: 'numeric',
+  return date.toLocaleString({
     month: 'long',
     day: 'numeric',
+    year: 'numeric',
     hour: 'numeric',
     minute: 'numeric',
     second: 'numeric',
-  };
-  return date.toLocaleDateString('en-US', options);
+    hour12: true,
+  });
 }
 
 function updateDateTime() {
-  const currentDate = new Date();
+  const currentDate = DateTime.now();
   const formattedDate = formatDate(currentDate);
+  const dateTimeElement = document.getElementById('date-time');
   dateTimeElement.textContent = formattedDate;
 }
 

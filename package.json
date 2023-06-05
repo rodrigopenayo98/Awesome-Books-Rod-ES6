@@ -9,5 +9,26 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0"
+  },
+  "name": "awesome-books-rod-es6",
+  "description": "<!-- TABLE OF CONTENTS -->\r <!-- TABLE OF CONTENTS -->",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigopenayo98/Awesome-Books-Rod-ES6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigopenayo98/Awesome-Books-Rod-ES6/issues"
+  },
+  "homepage": "https://github.com/rodrigopenayo98/Awesome-Books-Rod-ES6#readme",
+  "dependencies": {
+    "luxon": "^3.3.0"
   }
 }
